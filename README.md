@@ -148,7 +148,7 @@ The model will also be pushed to your hub repository `<your HF handle>/<repo-id-
 
 ```sh
 cd <path-to-finetune-hf-vits-repo>
-python convert_original_discriminator_checkpoint.py --language_code gri --pytorch_dump_folder_path <local-folder> --push_to_hub <repo-id-you-want>
+python convert_original_discriminator_checkpoint.py --language_code script_arabic --pytorch_dump_folder_path "./mms-uig-script_arabic-checkpoint" --push_to_hub <repo-id-you-want>
 ```
 
 You can now use `<repo-id-you-want>` or `<local-folder>` as a starting point to finetune your model!
@@ -173,7 +173,7 @@ The [training_config_examples](./training_config_examples) folder hosts examples
 For example, [finetune_english.json](./training_config_examples/finetune_english.json) is a working example of finetuning on a Welsh female accent.
 
 ```sh
-accelerate launch run_vits_finetuning.py ./training_config_examples/finetune_english.json
+accelerate launch run_vits_finetuning.py finetune_uyghur.json
 ```
 
 **Other option: pass parameters directly to the command line.**
