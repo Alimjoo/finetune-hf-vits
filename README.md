@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 ```bash
 git config --global credential.helper store
-huggingface-cli login
+hf auth login
 ```
 And then enter an authentication token from https://huggingface.co/settings/tokens. Create a new token if you do not have one already. You should make sure that this token has "write" privileges.
 
@@ -148,7 +148,7 @@ The model will also be pushed to your hub repository `<your HF handle>/<repo-id-
 
 ```sh
 cd <path-to-finetune-hf-vits-repo>
-python convert_original_discriminator_checkpoint.py --language_code script_arabic --pytorch_dump_folder_path "./mms-uig-script_arabic-checkpoint" --push_to_hub <repo-id-you-want>
+python convert_original_discriminator_checkpoint.py --language_code  uig-script_arabic --pytorch_dump_folder_path "./mms-uig-script_arabic-checkpoint" --push_to_hub <repo-id-you-want>
 ```
 
 You can now use `<repo-id-you-want>` or `<local-folder>` as a starting point to finetune your model!
